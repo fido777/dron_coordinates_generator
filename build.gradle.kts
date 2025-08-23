@@ -22,9 +22,15 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    // Web para exponer endpoints REST
     implementation("org.springframework.boot:spring-boot-starter-web")
+    // WebSocket
     implementation("org.springframework.boot:spring-boot-starter-websocket")
+    // JSON (para serializar las coordenadas, puedes usar Jackson)
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    // Para generar UUIDs o herramientas utilitarias
+    implementation("org.apache.commons:commons-lang3")
+
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
