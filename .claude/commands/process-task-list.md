@@ -1,0 +1,1 @@
+Please process the task list in @tasks\tasks-prd-websocket-coordinate-generator.md using @ai-dev-tasks\process-task-list.md
