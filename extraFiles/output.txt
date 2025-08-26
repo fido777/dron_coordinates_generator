@@ -1,0 +1,26 @@
+PS C:\Users\camih\IdeaProjects\dron_coordinates_generator> ./gradlew test --tests "SimulatorPropertiesIntegrationTest"
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2025-08-26T08:32:52.363-05:00  INFO 1200 --- [dron_coordinates_generator] [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2025-08-26T08:32:52.364-05:00  INFO 1200 --- [dron_coordinates_generator] [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@30704f85]]
+2025-08-26T08:32:52.364-05:00  INFO 1200 --- [dron_coordinates_generator] [ionShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+
+> Task :test
+
+SimulatorPropertiesIntegrationTest > should load interval from application yml() FAILED
+    org.opentest4j.AssertionFailedError at SimulatorPropertiesIntegrationTest.kt:19
+
+6 tests completed, 1 failed
+
+> Task :test FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///C:/Users/camih/IdeaProjects/dron_coordinates_generator/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 9s
+5 actionable tasks: 1 executed, 4 up-to-date

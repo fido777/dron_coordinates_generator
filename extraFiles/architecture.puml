@@ -1,0 +1,42 @@
+@startuml
+title Backend Architecture - Drone Detection (Spring Boot + Kotlin)
+
+skinparam componentStyle rectangle
+skinparam shadowing false
+
+package "Android App (Kotlin)" {
+  [STOMP Client] as MobileClient
+  [Map UI] as MapUI
+  [Notifier]
+  MobileClient -> MapUI
+}
+
+package "Backend (Spring Boot)" {
+  [SimulatorProperties (YAML)] as Config
+
+  [Spring Boot Application] as App
+
+  package "WebSocket Layer" {
+    [STOMP Broker (/topic)] as Broker
+    [Endpoint /ws] as WSEnd
+  }
+
+  package "Simulator" {
+    [@Scheduled Generator] as Sched
+    [Coordinate Generator] as Gen
+  }
+
+  [REST API (/api/...)] as API
+
+  database "PostgreSQL (optional)" as DB
+
+  Config --> Gen
+  Sched --> Gen
+  Gen --> Broker
+  App -down-> WSEnd
+  App -down-> API
+  API --> DB
+}
+
+MobileClient -- Broker : subscribe /topic/coordinates
+@enduml
