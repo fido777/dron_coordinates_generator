@@ -16,12 +16,7 @@ class WebSocketConfig : WebSocketMessageBrokerConfigurer {
     }
 
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
-        registry.addEndpoint("/ws")
+        registry.addEndpoint("/coordinates")
             .setAllowedOriginPatterns("*")
-            .withSockJS()
-
-//        registry.addEndpoint("/coordinates"); // This will allow you to use ws://localhost:8080/coordinates to establish websocket connection
-//        registry.addEndpoint("/coordinates").withSockJS(); // This will allow you to use http://localhost:8080/coordinates to establish websocket connection
-
     }
 }

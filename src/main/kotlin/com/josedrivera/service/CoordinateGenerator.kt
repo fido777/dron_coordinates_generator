@@ -2,6 +2,7 @@ package com.josedrivera.service
 
 import com.josedrivera.config.SimulatorProperties
 import com.josedrivera.model.Coordinate
+import com.josedrivera.model.ThreatLevel
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 import java.util.UUID
@@ -11,7 +12,6 @@ import kotlin.random.Random
 class CoordinateGenerator(
     private val simulatorProperties: SimulatorProperties
 ) {
-    private val threatLevels = listOf("LOW", "MEDIUM", "HIGH")
 
     fun generate(): Coordinate? {
         if (simulatorProperties.cities.isEmpty()) return null
@@ -26,7 +26,7 @@ class CoordinateGenerator(
             latitude = latitude,
             longitude = longitude,
             timestamp = LocalDateTime.now(),
-            threatLevel = threatLevels.random()
+            threatLevel = ThreatLevel.entries.random().name
         )
     }
 }

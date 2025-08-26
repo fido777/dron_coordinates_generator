@@ -34,13 +34,12 @@ class WebSocketConfigTest {
     @Test
     fun `should register STOMP endpoints with SockJS and CORS support`() {
         val mockEndpoint = mockk<org.springframework.web.socket.config.annotation.StompWebSocketEndpointRegistration>(relaxed = true)
-        every { stompEndpointRegistry.addEndpoint("/ws") } returns mockEndpoint
+        every { stompEndpointRegistry.addEndpoint("/coordinates") } returns mockEndpoint
         every { mockEndpoint.setAllowedOriginPatterns("*") } returns mockEndpoint
         
         webSocketConfig.registerStompEndpoints(stompEndpointRegistry)
         
-        verify { stompEndpointRegistry.addEndpoint("/ws") }
+        verify { stompEndpointRegistry.addEndpoint("/coordinates") }
         verify { mockEndpoint.setAllowedOriginPatterns("*") }
-        verify { mockEndpoint.withSockJS() }
     }
 }

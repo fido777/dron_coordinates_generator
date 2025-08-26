@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: dron_coordinates_generator
+
+drone:
+  simulator:
+    interval-ms: 10000
+    cities:
+      - name: "Medellín"
+        lat-range: [6.20, 6.35]
+        lon-range: [-75.65, -75.50]
+      - name: "Bogotá"
+        lat-range: [4.50, 4.80]
+        lon-range: [-74.20, -74.00]
+      - name: "Cali"
+        lat-range: [3.30, 3.50]
+        lon-range: [-76.60, -76.40]
+      - name: "Barranquilla"
+        lat-range: [10.90, 11.10]
+        lon-range: [-74.90, -74.70]
+      - name: "Cartagena"
+        lat-range: [10.35, 10.50]
+        lon-range: [-75.60, -75.40]
+      - name: "Bucaramanga"
+        lat-range: [7.10, 7.20]
+        lon-range: [-73.15, -73.00]
+      - name: "Manizales"
+        lat-range: [5.02, 5.10]
+        lon-range: [-75.55, -75.45]
+      - name: "Pereira"
+        lat-range: [4.75, 4.85]
+        lon-range: [-75.75, -75.60]
