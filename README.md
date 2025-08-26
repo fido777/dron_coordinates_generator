@@ -4,6 +4,7 @@
 
 Este proyecto forma parte de un sistema de alerta temprana desarrollado para la Fuerza Aérea Colombiana, cuyo objetivo es simular detecciones de drones no autorizados mediante coordenadas generadas periódicamente y transmitidas en tiempo real a una aplicación móvil.
 
+
 ## 🚀 Descripción
 
 El backend implementado en **Spring Boot (Kotlin)** simula un sistema de detección de drones generando coordenadas geográficas aleatorias dentro de varias ciudades de Colombia. Cada coordenada representa una supuesta detección de dron y es transmitida al cliente a través de un canal **WebSocket en tiempo real**, permitiendo su visualización inmediata.
@@ -15,7 +16,6 @@ Este backend también incluye:
 - Transmisión WebSocket de alertas en tiempo real
 - Configuración modular y preparada para despliegue en producción
 
----
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -25,7 +25,6 @@ Este backend también incluye:
 - 🧪 **JUnit + MockK** para pruebas unitarias
 - 📦 **Gradle Kotlin DSL**
 
----
 
 ## 📡 Endpoints principales
 
@@ -42,7 +41,6 @@ Este backend también incluye:
 | GET    | `/api/detections/{id}` | Obtener detalle de una detección específica |
 | GET    | `/api/health`          | Verificar estado del backend                |
 
----
 
 ## ▶️ Cómo ejecutar
 
@@ -64,7 +62,6 @@ cd dron_coordinates_generator
 
 La aplicación estará disponible en `http://localhost:8080`.
 
----
 
 ## 📱 Casos de uso
 
@@ -74,19 +71,16 @@ Este backend está diseñado para integrarse con una aplicación frontend (móvi
 - Muestra en tiempo real los drones sobre un mapa
 - Notifica al usuario sobre amenazas según nivel de riesgo
 
----
 
 ## 🔐 Seguridad
 
 Este proyecto no expone datos reales por razones de confidencialidad. Toda la información generada es simulada, y el sistema puede ser adaptado a un entorno productivo real mediante integración con sensores o radares reales.
 
----
 
 ## 📃 Licencia
 
 Este proyecto ha sido desarrollado con fines académicos e institucionales. Su distribución y uso está sujeta a autorización de la Fuerza Aérea Colombiana.
 
----
 
 ## 👨‍💻 Autor
 
