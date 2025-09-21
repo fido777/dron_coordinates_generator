@@ -63,6 +63,32 @@ cd dron_coordinates_generator
 La aplicación estará disponible en `http://localhost:8080`.
 
 
+## ☁️ Despliegue en la nube
+
+El backend está desplegado en **AWS App Runner** para proporcionar alta disponibilidad y escalabilidad automática al servicio móvil.
+
+### Configuración de producción
+
+- **Servicio:** AWS App Runner
+- **URL de producción:** `https://dron-detector.aws-app-runner.com`
+- **WebSocket endpoint:** `wss://dron-detector.aws-app-runner.com/ws`
+- **Escalado automático:** Configurado para manejar entre 1-10 instancias según demanda
+
+### Características del despliegue
+
+- ✅ **Despliegue continuo** desde repositorio Git
+- ✅ **HTTPS/WSS** habilitado automáticamente
+- ✅ **Balanceador de carga** integrado
+- ✅ **Health checks** configurados en `/api/health`
+
+### Conexión desde aplicación móvil
+
+```kotlin
+// Configuración para producción
+val webSocketUrl = "wss://dron-detector.aws-app-runner.com/ws"
+val apiBaseUrl = "https://dron-detector.aws-app-runner.com/api"
+```
+
 ## 📱 Casos de uso
 
 Este backend está diseñado para integrarse con una aplicación frontend (móvil o web) que:

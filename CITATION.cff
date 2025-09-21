@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Drone Coordinates Generator - Early Warning System Backend"
+abstract: "Backend system for the Colombian Air Force early warning mobile system for unauthorized drone detection. Generates random geographic coordinates within Colombian cities and transmits them in real-time via WebSocket, simulating drone detection alerts."
+authors:
+  - given-names: José Daniel
+    family-names: Rivera Vergara
+    email: josed.rivera@udea.edu.co
+    affiliation: Universidad de Antioquia
+    orcid: ""
+repository-code: "https://github.com/fido777/dron_coordinates_generator"
+url: "https://github.com/fido777/dron_coordinates_generator"
+version: "0.0.1-SNAPSHOT"
+date-released: "2025-09-21"
+license: "Proprietary"
+keywords:
+  - drone-detection
+  - websocket
+  - spring-boot
+  - kotlin
+  - real-time-alerts
+  - early-warning-system
+  - colombian-air-force
+  - geographic-coordinates
+  - simulation
+  - mobile-backend
+identifiers:
+  - type: url
+    value: "https://github.com/fido777/dron_coordinates_generator"
+    description: "GitHub repository"
+preferred-citation:
+  type: software
+  title: "Drone Coordinates Generator - Early Warning System Backend"
+  authors:
+    - given-names: José Daniel
+      family-names: Rivera Vergara
+      email: josed.rivera@udea.edu.co
+      affiliation: Universidad de Antioquia
+  repository-code: "https://github.com/fido777/dron_coordinates_generator"
+  version: "0.0.1-SNAPSHOT"
+  date-released: "2025-09-21"
